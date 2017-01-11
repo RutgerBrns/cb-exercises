@@ -83,4 +83,5 @@ hr {
 
 li:hover {
 	text-decoration: underline;
+	color: green;
 }
