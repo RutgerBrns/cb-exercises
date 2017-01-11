@@ -1,0 +1,30 @@
+h1 {
+	color: brown;
+}
+
+p {
+	color: blue;
+}
+
+.pAboutBacon {
+	background-color: lavender;
+}
+
+.pAboutMeat{
+	background-color: cornsilk; 
+}
+
+.pAboutBacon .animal {
+	color: red;
+	text-decoration: underline;	
+}
+
+.pAboutMeat .animal{
+	color: green;
+	text-decoration: underline;
+}
+
+.animal {
+	color: yellow;
+	text-decoration: underline;
+}

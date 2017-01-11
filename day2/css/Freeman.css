@@ -1,0 +1,86 @@
+h1 {
+	color: blue;
+}
+
+h3 {
+	color: gray;
+}
+
+hr {
+    height: 1px;
+    color: #ed1d61;
+    background: #ed1d61;
+    font-size: 0;
+    border: 0;
+}
+
+img {
+	align-content: center;
+}
+
+span {
+	color: red;
+	background-color: black;
+}
+
+a {
+	color: red;
+	font-weight: bold;
+}
+
+body {
+	align-content: center;
+	margin-left: auto;
+	margin-right: auto;
+	width: 70%;
+}
+
+hr {
+	width: 90%;
+}
+
+.red {
+	background-color: red;
+	color: white;
+}
+
+.blue {
+	background-color: blue;
+	color: white;
+}
+
+.yellow {
+	background-color: yellow;
+}
+
+.red a {
+	color: yellow;
+}
+
+.blue a {
+	color: red;
+}
+
+.blue a:hover {
+	color:white;
+}
+
+.red a:hover {
+	color:white;
+}
+
+.yellow a:hover {
+	color:white;
+}
+
+.seen {
+	color: rgb(203,0,0);
+}
+
+.unseen {
+	color: silver;
+}
+
+li:hover {
+	text-decoration: underline;
+}

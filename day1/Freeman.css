@@ -1,0 +1,15 @@
+h1 {
+	color: blue;
+}
+
+h3 {
+	color: gray;
+}
+
+hr {
+    height: 1px;
+    color: #ed1d61;
+    background: #ed1d61;
+    font-size: 0;
+    border: 0;
+}
