@@ -1,0 +1,41 @@
+h1 {
+	color: blue;
+}
+
+.main {
+color: magenta;
+border: 10px solid blue;
+padding: 10px;
+width: 30%;
+float: left;
+background-color: yellow;
+}
+
+.main2 {
+color: magenta;
+border: 10px solid blue;
+padding: 10px;
+width: 30%;
+height: 30%;
+float: right;
+background-color: yellow;
+}
+
+
+p {
+	font-family: montserrat;	
+}
+
+.container{
+	display: flex;
+
+}
+
+
+h1:before {
+	content: "sick";
+}
+
+h1:after {
+	content: "wacko";
+}

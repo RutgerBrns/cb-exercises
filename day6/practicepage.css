@@ -1,0 +1,25 @@
+.header {
+
+	margin-top: 1%;
+	margin-left: auto;
+	height: 8vh;
+	width: 99%;
+	background-color: darkgrey;
+	color: darkgrey;	
+
+}
+
+.paragraph {
+
+	border-left: 3px solid lightblue;
+	padding-left: 1%;
+	width: 80%;
+	max-width: 1000px;
+	margin: 10px auto;
+
+}
+
+.paragraph:first-letter {
+	font-size: 2em;
+	float: left;
+}

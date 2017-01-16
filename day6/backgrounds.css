@@ -1,0 +1,68 @@
+.outer {
+
+	width: 80%;
+	min-height: 80vh;
+	margin: 10vh auto;	
+	border: 1px solid black;
+	background: rgb(244,102,41); /* Old browsers */
+	background: -moz-linear-gradient(top, rgba(244,102,41,1) 0%, rgba(234,170,42,1) 45%, rgba(71,174,183,1) 70%, rgba(35,83,138,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, rgba(244,102,41,1) 0%,rgba(234,170,42,1) 45%,rgba(71,174,183,1) 70%,rgba(35,83,138,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, rgba(244,102,41,1) 0%,rgba(234,170,42,1) 45%,rgba(71,174,183,1) 70%,rgba(35,83,138,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	position: relative;
+	
+
+}
+
+.inner {
+	border: 1px solid black;
+	background: -moz-linear-gradient(left, rgba(0,0,0,0.5) 1%, rgba(0,0,0,0.5) 75%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left, rgba(0,0,0,0.5) 1%,rgba(0,0,0,0.5) 75%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right, rgba(0,0,0,0.5) 1%,rgba(0,0,0,0.5) 75%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 */
+	width: 50%;
+	margin: 10%;
+	padding: 1em;
+	position: relative;
+	z-index: 1;
+	color: white;
+}
+
+.green {
+	width: 50%;
+	height: 100%;
+	position: absolute; /* position is abosolute meaning that the first relative that is set to absolute or relative or elsen de body*/
+	right: 0;
+	top: 0;	
+	background-color: green;
+	z-index: 0;
+	visibility: hidden;
+
+}
+
+.smiling {
+
+	width: 200px;
+	height: 200px;
+	border: 1px solid white;
+	background-image: url('images/smiley.png');
+	background-size: 50% auto; /* width 50% of the element, height automatic based on image's aspect ratio */
+	background-repeat: no-repeat;
+	background-position: center center; /* center of the image is in the center of the element */
+
+}
+
+.nebula {
+
+	width: 100%;
+	background-image: url('images/nebula.jpg');
+	background-position: left top; /* equivalent to 0px 0px */
+	background-size: cover; /* large enough for the container to fit inside, aspect ratio unchanged */
+	background-attachment: fixed; /* fixed to the viewport */
+	padding: 3em;
+	color: white;
+
+}
+
+
+
+/*http://www.colorzilla.com/gradient-editor*/

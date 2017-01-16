@@ -1,0 +1,15 @@
+#First {
+	border: 1px solid black;
+}
+
+#Second {
+	border: 10px blue dotted;
+}
+
+#Third {
+	border-top: 3px;
+	border-bottom: 3px;
+	border-right: 1px;
+	border-color: green;
+	border-style: solid;	
+}
