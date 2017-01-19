@@ -1,0 +1,29 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+body {
+  background-color: black;
+  font-family: sans-serif;
+}
+h1 {
+  color: red;
+  font-size: 180px;
+}
+/*change the color of the h1 */
+h2 {
+  color: orange;
+  font-size: 100px;
+}
+/*change the color of the h2 */
+h3 {
+  color: green;
+}
+/*change the color of the h3 */
+h4 {
+  color: yellow;
+}
+/*change the color of the h4 */
+
+/*# sourceMappingURL=index.css.map */
