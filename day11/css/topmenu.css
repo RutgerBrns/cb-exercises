@@ -1,0 +1,49 @@
+body {
+	margin: 0;
+}
+
+nav {
+	width: 100%;
+	height: 5%;
+	top: 0px;
+	right: 0px;
+	background-color: blue;
+	color: white;
+	position: fixed;
+	padding: 3px;
+}
+
+nav a {
+	color: white;
+	text-decoration: none;
+	margin-right: 1em;
+}
+
+nav a:hover{
+	text-decoration: underline;
+}
+
+nav .links {
+	float: right;
+
+}
+
+nav .links > div {
+	display: inline-block;
+	margin: 0 0.5em;
+	position relative;
+}
+
+nav .links > div .submenu {
+	position: absolute;
+	right: 0;
+	top: 100%;
+	background-color: darkgray;
+	color: black;
+	padding: 1em;
+	display:none;
+}
+
+nav .links > div:hover .submenu {
+	display: block;
+}
