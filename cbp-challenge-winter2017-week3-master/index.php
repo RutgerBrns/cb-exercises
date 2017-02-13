@@ -1,9 +1,21 @@
 <?php require_once('lib/data-functions.php'); ?>
+<?php require_once('lib/var_show.php') ?>
 
+<!-- Send Data on Submit -->
+		<?php 
 
+		if( !empty($_POST['student_number']) && !empty($_POST['student_firstname']) && !empty($_POST['student_lastname']) && !empty($_POST['year_started']) && isset($_POST['gender'])) {
+				$student_number = $_POST['student_number'];
+				$_POST['name'] = $student_number;
+				echo 'DATA IS SENT!';				
+				insert_data($_POST);
+				file_put_contents('student.txt', file_get_contents('php://input'));
 
+			}	else  {
+				echo 'DATA NOT SENT, LOOK AT SUMMARY TO SEE WHAT IS WRONG';				
+			};			
 
-
+		?>	
 
 <!DOCTYPE html>
 <html>
@@ -14,6 +26,10 @@
 
 	<h1>Enrolling a new student.</h1>
 	<h4>Please fill in the information below.</h4>
+	<nav>
+        <a href="list.php">Click here to see the list of all the students registered so far</a>
+    </nav>
+
 
 	<br>
 
@@ -70,7 +86,7 @@
 		<br>
 		<br>
 
-		<br><input type="submit" value="Submit Entry">
+		<br><input type="submit" value="submit data">
 	</form>
 
 
@@ -113,21 +129,14 @@
 		} else {
 			echo "Student Gender is incorrect <br>";
 			} ?>
-
+		
 		<br>
-		<br>
+		<br>	
 
-		<!-- Send Data on Submit -->
-		<?php 
+		<p> SENT DATA LOOKS LIKE: </p>
 
-		if( isset($_POST['submit']) && !empty($_POST['student_number']) && !empty($_POST['student_firstname']) && !empty($_POST['student_lastname']) && !empty($_POST['year_started']) && isset($_POST['gender'])) {
-			insert_data($_POST);
-			echo 'DATA IS SENT!';
-			}	else  {
-			echo 'DATA NOT SENT, LOOK AT SUMMARY TO SEE WHAT IS WRONG';
-			}
-
-		?>	
+		<?php var_show($_POST); ?>
+		
 
 </body>
 </html>

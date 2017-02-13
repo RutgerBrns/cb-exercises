@@ -1,0 +1,22 @@
+student:
+	id: integer;
+	student_number: integer;
+	student_first_name: short string;
+	student_last_name: short string;
+	first_study_year: integer;
+	age: integer;
+	date_of_birth: short string;
+	phone_number: short string;
+	nationality: short string;
+	disability: boolean;
+	dislectic: boolean;
+	email: short string;
+	average_grade: decimal number;
+	gender:	boolean;
+	student_length: decimal number;
+	student_study: short string;
+	faculty_enrolled: short string;
+	student_motivation: long string;
+	degree: boolean;
+	degree_level: integer;
+	degree_name: short string;

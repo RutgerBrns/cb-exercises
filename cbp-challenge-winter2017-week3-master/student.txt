@@ -1,0 +1,1 @@
+student_number=1238123400&student_firstname=Ezeqiel&student_lastname=Patron&year_started=2183&gender=male&faculty=Computer+Science

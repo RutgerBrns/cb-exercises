@@ -1,0 +1,58 @@
+First Name	|	Country				|		arrive in-time		|			
+
+Kosta		|	Greece				|		never				|
+Clifford	| 	United States		|		always				|
+Sean		|	Korea				|		never				|
+Momoki		| 	Japan				|		most of times		|
+Rutger		| 	The Netherlands		|		some times			|
+Aniko		|	Hungary				|		always				|
+Nathalie	| 	Poland				|		most of times		|
+Nathalie	|	Czech				|		most of times		|
+Oleg		| 	Russia				|		most of times		|
+Ezeqiel		|	Argentina			|		never				|
+Muhamed		|	France				|		always				|
+OJ			|	Czech				|		most of times		|
+Wladimir	|	Latvia				|		most of times		|
+Emmet		|	Ireland				|		never				|
+Aaron		|	Ireland				|		never				|
+Krystina	|	Serbia				|		some times			|
+
+
+Edit 11:52:36 SELECT firstname, lastname FROM students WHERE firstname = 'momoki' OR firstname...
+Edit 11:48:58 SELECT firstname, lastname FROM students WHERE firstname = 'momoki'  ;
+Edit 11:48:42 SELECT firstname, lastname FROM students WHERE firstname = momoki  ;
+Edit 11:46:12 SELECT firstname, lastname FROM students WHERE id = 3;
+Edit 11:44:05 SELECT firstname, lastname FROM students;
+Edit 11:43:00 SELECT * FROM students;
+Edit 11:36:36 UPDATE `students` SET `ID` = '9', `firstname` = 'Ezeqiel', `lastname` = 'Rodrigu... (0.005 s)
+Edit 11:36:23 UPDATE `students` SET `ID` = '8', `firstname` = 'Wladimir', `lastname` = 'Bossma... (0.005 s)
+Edit 11:36:07 DELETE FROM `students` WHERE `ID` = '7'; (0.005 s)
+Edit 11:36:02 DELETE FROM `students` WHERE `ID` = '6'; (0.010 s)
+Edit 11:35:42 INSERT INTO `students` (firstname, lastname, birthday, regdate) VALUES ('Wladimi...
+Edit 11:35:16 INSERT INTO students (firstname, lastname, birthday, regdate) VALUES ('Wladimir'...
+Edit 11:35:06 INSERT INTO `students` (firstname, lastname, birthday, regdate) VALUES ('Wladimi...
+Edit 11:32:15 INSERT INTO 'students' ('firstname', 'lastname', 'birthday', 'regdate') VALUES (...
+Edit 11:27:17 UPDATE `students` SET `ID` = '5', `firstname` = 'Sean', `lastname` = 'ChoiChoi',... (0.006 s)
+Edit 11:27:09 UPDATE `students` SET `ID` = '4', `firstname` = 'Momoki', `lastname` = 'Suda', `... (0.005 s)
+Edit 11:27:03 UPDATE `students` SET `ID` = '3', `firstname` = 'Clifford', `lastname` = 'Schmid... (0.005 s)
+Edit 11:26:54 UPDATE `students` SET `ID` = '2', `firstname` = 'Rutger', `lastname` = 'Beerens'... (0.005 s)
+Edit 11:26:47 UPDATE `students` SET `ID` = '1', `firstname` = 'Kosta', `lastname` = 'Vassos', ... (0.005 s)
+Edit 11:26:22 ALTER TABLE `students` CHANGE `lastname` `lastname` varchar(127) NOT NULL AFTER ... (0.170 s)
+Edit 11:26:07 UPDATE `students` SET `ID` = '1', `firstname` = 'Kosta', `lastname` = '0000-00-0... (0.006 s)
+Edit 11:25:45 INSERT INTO `students` (`firstname`, `lastname`, `country`, `arrival`, `birthday... (0.005 s)
+Edit 11:25:03 ALTER TABLE `students` CHANGE `ID` `ID` int(11) NOT NULL AUTO_INCREMENT PRIMARY ... (0.289 s)
+Edit 11:24:50 UPDATE `students` SET `ID` = '4', `firstname` = 'Momoki', `lastname` = '0000-00-... (0.010 s)
+Edit 11:24:42 UPDATE `students` SET `ID` = '3', `firstname` = 'Clifford', `lastname` = '0000-0... (0.005 s)
+Edit 11:24:32 UPDATE `students` SET `ID` = '2', `firstname` = 'Rutger', `lastname` = '0000-00-... (0.005 s)
+Edit 11:24:25 UPDATE `students` SET `ID` = `ID` + '0', `firstname` = 'Rutger', `lastname` = '0... (0.001 s)
+Edit 11:24:12 UPDATE `students` SET `ID` = '1', `firstname` = 'Kosta', `lastname` = '0000-00-0... (0.005 s)
+Edit 11:22:44 UPDATE `students` SET `ID` = '0', `firstname` = 'Kosta', `lastname` = '0000-00-0... (0.005 s)
+Edit 11:22:27 UPDATE `students` SET `ID` = '0', `firstname` = 'Rutger', `lastname` = '0000-00-... (0.005 s)
+Edit 11:22:10 UPDATE `students` SET `ID` = '0', `firstname` = 'Clifford', `lastname` = '0000-0... (0.007 s)
+Edit 11:21:31 UPDATE `students` SET `ID` = '0', `firstname` = 'Momoki', `lastname` = '0000-00-... (0.006 s)
+Edit 11:16:47 INSERT INTO `students` (`ID`, `firstname`, `lastname`, `country`, `arrival`, `bi... (0.005 s)
+Edit 11:14:45 INSERT INTO `students` (`ID`, `firstname`, `lastname`, `country`, `arrival`, `bi... (0.005 s)
+Edit 11:12:34 INSERT INTO `students` (`ID`, `firstname`, `lastname`, `country`, `arrival`, `bi... (0.005 s)
+Edit 11:11:34 INSERT INTO `students` (`ID`, `firstname`, `lastname`, `country`, `arrival`, `bi... (0.009 s)
+Edit 10:48:07 CREATE TABLE `students` (   `ID` int NOT NULL,   `firstname` varchar(127) NOT NU... (0.069 s)
+Edit 10:47:48 CREATE TABLE `students` (   `ID` int NOT NULL,   `firstname` varchar(127) NOT NU...
