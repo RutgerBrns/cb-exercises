@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>.test-ok { display: none; }</style>
+    <link rel="stylesheet" href="dist/index.css">
+</head>
+
+<body>
+    <p class="test-froggy">🐸</p>
+    <p class="test-ok">✔️</p>
+
+    <div id="map" class="map">Map will be here</div>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARQQeLv3TddJdvY6CGTA1RHrCULVthkdA"></script>
+    <script async defer src="embed-map.js"></script>
+
+    <script type="text/javascript">
+   window.addEventListener('load', function() {
+    var uluru = {
+        lat: 50.0744638,
+        lng: 14.430905199999998
+    };
+
+    function initMap(point) {
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 12,
+            center: point
+        });
+        var marker = new google.maps.Marker({
+            position: point,
+            map: map
+        });
+    }
+
+    initMap(uluru);
+});
+    </script>
+
+    <h1>GPS Locations</h1>
+		<script type="text/javascript">
+		window.addEventListener('load', function() {
+			if (navigator.geolocation) {
+			    navigator.geolocation.getCurrentPosition(function(location) {
+			        console.log(location);
+			    }, function(error) {
+			        console.error(error);
+			    });
+			}
+		});
+</script>
+
+</body>
+
+ <style>
+        .map {
+            width: 100%;
+            height: 90vh;
+        }
+    </style>
+
+</html>

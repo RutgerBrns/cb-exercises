@@ -1,0 +1,77 @@
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title></title>
+	 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+        <script type="text/javascript">
+        
+        </script>
+</head>
+<body>
+
+	<form>
+		<h1>Form</h1><br><br>
+
+		<label for="number">How much? (in thousands)</label><br>
+		<input type="number" name="number" min="1000" max="10000" step="200" autofocus required><br><br>
+
+		<label for="reason">Why do you need it? (at least 10 characters)</label><br>
+		<input type="text" name="reason" placeholder="I need it to buy a flower…" required pattern=".{10,}"><br><br>
+
+		<label for="email">E-mail</label><br>
+		<input type="email" name="email" required><br><br>
+
+		<label for="message">Message</label><br>
+		<textarea name="message" rows="3"></textarea><br><br>
+
+		<input type="submit" id="register" value="Register" />
+
+	</form>
+
+<style type="text/css">
+
+form {
+	padding: 1em;
+	width: 600px;
+}
+
+	form input:invalid [type=submit]{
+		visibility:hidden;
+	}
+
+	form input:valid [type=submit]{
+		visibility:visible;
+	}
+
+	input {
+		margin-bottom: 1em;
+	}
+
+	input::placeholder {
+		font-style: italic;
+	}
+
+	input:required {
+		border-color: #999;
+	}
+
+	form:valid input {
+		background-color: hsla(118, 2%, 23%, 1);
+	}
+
+	form input:required:valid {
+		background-image: url('../check.png');
+		background-position: right 15px bottom 50%;
+		background-repeat: no-repeat;
+		background-size: 1em;
+	}
+
+
+}
+
+</style>
+</body>
+</html>

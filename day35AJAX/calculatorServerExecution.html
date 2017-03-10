@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Mobirise Free Bootstrap Template, https://mobirise.com -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="generator" content="SlavoKozar.sk">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="CodeLeague">
+    <title>Coding Bootcamp</title>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
+     <!-- Font Awesome -->
+     <script>src="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"</script>
+     <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div class="container">
+    <div class="row text-center" style="margin-top:100px">
+        <div class="col-md-3">
+            <input class="form-control" id="number1" type="number">
+        </div>
+        <div class="col-md-3">
+            <select class="form-control" id="operand">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+                <option value="%">%</option>
+            </select>
+        </div>
+        <div class="col-md-3">
+            <input class="form-control" id="number2" type="number">
+        </div>
+        <div class="col-md-3">
+            <input class="form-control" id="result" type="number" disabled>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <button class="btn btn-primary pull-right" id="calculate">Calculate</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <button class="btn btn-primary pull-right" id="modal">modal</button>
+        </div>
+    </div>
+
+
+</div>
+
+<script>
+
+    var $number1 = $('#number1').val();  
+    var $number2 = $('#number2').val();
+    var $operand = $('#operand').val();
+
+    $('#calculate').click(function(){
+
+            $.ajax({
+                "url" : "calculator.php",
+                "type" : "post",
+                "data" : {
+                    "n1" : $number1,
+                    "n2" : $number2,
+                    "oper" : $operand
+                }
+            })
+            .done(function(data){
+                var parsed = JSON.parse(data);
+                console.log(parsed.result);  
+            })
+            .fail(function(){
+                alert('something went wrong with the AJAX <br/>');
+            })
+            .always();
+
+        });
+
+        $('#modal').click(function(){
+             $.ajax({
+            "url" : "modal.php",
+            "type" : "get"
+            }
+        }).done(function(data){
+                var $modal = $data;
+                $('body').append(data);
+
+                $modal.modal('show');
+
+                $modal.on('hidden.bs.modal', function (e) {
+                    $modal.rmove();
+                    $('.modal-backdrop').remove();
+                })
+            })
+            .fail(function(){
+                alert('something went wrong with the AJAX <br/>');
+            })
+            .always();
+
+        });
+
+            /*
+            'url': 'test.php',
+            'method': 'post',
+            'data': {
+                'a': 10,
+                'b': 20
+    });
+
+    $('#btn1').click(function () {
+//        create ajax call for url : 'test.php'
+        //create ajax call for url : 'test.php' method : 'post'
+        $('#spinner').removeClass('hidden');
+        $.ajax({
+            'url': 'test.php',
+            'method': 'post',
+            'data': {
+                'a': $_POST,
+                'b': 20
+            }
+        })
+        .done(function(data){
+            console.log(data);
+        })
+        .fail(function(){
+            alert('Something went wrong, come back in a minute or two. :/');
+        })
+        .always(function(){
+            $('#spinner').addClass('hidden');
+        });
+    }); */
+</script>
+</body>
+</html>
+
+
